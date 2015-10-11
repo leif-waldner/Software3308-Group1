@@ -1,9 +1,8 @@
-LocalHackDay2015
+Software 3308 - Group 1
 ======
 
-Here lies our 2015 LocalHackDay site.
+Here lies our site.
 
-Building a hacking culture at the University of Colorado, Boulder.
 
 #Contributing
 Branch and merge to ```staging``` branch. <br>Only changes which are prepared for live should reside in the ```gh-pages``` branch
@@ -17,8 +16,10 @@ Branch and merge to ```staging``` branch. <br>Only changes which are prepared fo
 
 ## Install and Run Locally
 
-    git clone https://github.com/HackCU/LocalHackDay2015
+    git clone https://github.com/leif-waldner/Software3308-Group1.git
     open index.html
+
+    Note: you may need to do xdg-open index.html instead.
 
 ## Style Guidelines
 
