@@ -1,0 +1,13 @@
+To install the needed libraries for the rss scripts, do the following in the project's rss directory:
+
+- pip install virtualenv
+- virtualenv venv
+- source venv/bin/activate
+- pip install -r requirements.txt
+
+note - each time you open a new terminal and want to run the rss scripts you will need to do "source venv/bin/active".
+
+If you don't want to mess with the virtual environment, just do "pip install -r requirements.txt"
+
+For more info on python virtual environments, see: https://pypi.python.org/pypi/feedparser
+For more info on feedparser, see: https://pypi.python.org/pypi/feedparser
