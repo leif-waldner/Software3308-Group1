@@ -17,9 +17,10 @@ Branch and merge to ```staging``` branch. <br>Only changes which are prepared fo
 ## Install and Run Locally
 
     git clone https://github.com/leif-waldner/Software3308-Group1.git
-    open index.html
+    cd Software3308-Group1
+    python -m SimpleHTTPServer
 
-    Note: you may need to do xdg-open index.html instead.
+Then go to http://localhost:8080
 
 ## Style Guidelines
 

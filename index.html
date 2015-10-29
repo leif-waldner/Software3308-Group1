@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
   <script src="https://www.google.com/jsapi"></script>
-  
+
   <script type="text/javascript">
-    // This code generates a "Raw Searcher" to handle search queries. The Raw 
+    // This code generates a "Raw Searcher" to handle search queries. The Raw
     // Searcher requires you to handle and draw the search results manually.
     google.load('search', '1');
 
@@ -50,7 +50,7 @@
         // Create a News Search instance.
         newsSearch = new google.search.NewsSearch();
 
-        // Set searchComplete as the callback function when a search is 
+        // Set searchComplete as the callback function when a search is
         // complete.  The newsSearch object will have results in it.
         newsSearch.setSearchCompleteCallback(this, searchComplete, null);
 
@@ -62,7 +62,7 @@
     }
     // Set a callback to call your code when the page loads
 google.setOnLoadCallback(onLoad);
-    
+
   </script>
 </head>
 <body>
@@ -83,12 +83,12 @@ google.setOnLoadCallback(onLoad);
           <li><a href="#about">About</a></li>
           <li><a href="#map">Map</a></li>
         </ul>
-      </div>       
+      </div>
     </nav>
     <div class="section no-pad-bot">
       <div class="container">
         <div class="center lhd-logo">
-          <img src="" alt="We need a logo">
+          <img src="img/strawman.png" alt="logo">
 	</div>
         <div class="row center intro col s12">
           <h4 style="color:black" class="header col s12 light lhd-details-0"><b>Geolocated Readtime News</b></h4>
@@ -136,11 +136,11 @@ google.setOnLoadCallback(onLoad);
     height: 750,
     width: 1200,
     geographyConfig: {
-    dataUrl: null, 
+    dataUrl: null,
     hideAntarctica: true,
     borderWidth: 1,
     borderColor: '#000',
-    popupTemplate: function(geography, data) { 
+    popupTemplate: function(geography, data) {
         return "<div class='hoverinfo'><strong>" + geography.properties.name + ' : ' + data.fillKey +'<br></br>' + data.newsdescription + '</strong></div>';
     },
     popupOnHover: true,
@@ -149,7 +149,7 @@ google.setOnLoadCallback(onLoad);
     highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
     highlightBorderWidth: 2
     },
-    
+
     fills: {
     'No News': '#f9f5dc',
     defaultFill: '#f9f5dc',
@@ -222,7 +222,7 @@ google.setOnLoadCallback(onLoad);
             },
             "MA": {
                 "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now." 
+                "newsdescription": "We don't have news for this area right now."
             },
             "MN": {
                 "fillKey": "No News",
@@ -389,4 +389,3 @@ google.setOnLoadCallback(onLoad);
 
 </body>
 </html>
-
