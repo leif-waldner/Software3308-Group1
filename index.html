@@ -1,5 +1,5 @@
-<DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
@@ -13,18 +13,66 @@
   <link href="css/select2.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <!-- Open Graph -->
-   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+  <script src="https://www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+    // This code generates a "Raw Searcher" to handle search queries. The Raw
+    // Searcher requires you to handle and draw the search results manually.
+    google.load('search', '1');
+
+    var newsSearch;
+
+    function searchComplete() {
+
+        // Check that we got results
+        document.getElementById('content').innerHTML = '';
+        if (newsSearch.results && newsSearch.results.length > 0) {
+            for (var i = 0; i < newsSearch.results.length; i++) {
+
+                // Create HTML elements for search results
+                var p = document.createElement('p');
+                var a = document.createElement('a');
+                a.href="/news-search/v1/newsSearch.results[i].url;"
+                    a.innerHTML = newsSearch.results[i].title;
+
+                // Append search results to the HTML nodes
+                p.appendChild(a);
+                document.body.appendChild(p);
+            }
+        }
+    }
+
+    function onLoad() {
+
+        // Create a News Search instance.
+        newsSearch = new google.search.NewsSearch();
+
+        // Set searchComplete as the callback function when a search is
+        // complete.  The newsSearch object will have results in it.
+        newsSearch.setSearchCompleteCallback(this, searchComplete, null);
+
+        // Specify search quer(ies)
+        newsSearch.execute('Barack Obama');
+
+        // Include the required Google branding
+        google.search.Search.getBranding('branding');
+    }
+    // Set a callback to call your code when the page loads
+google.setOnLoadCallback(onLoad);
+
+  </script>
 </head>
 <body>
   <section id="hello" class="hello-opener">
     <nav class="navi-skrollz" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="http://leif-waldner@github.io" class="brand-logo"><img src=""></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#hello">Hello</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#map">Map</a></li>
         </ul>
       </div>
     </nav>
@@ -33,13 +81,14 @@
         <ul class="right hide-on-med-and-down">
           <li><a href="#hello">Hello</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#map">Map</a></li>
         </ul>
-      </div>       
+      </div>
     </nav>
-    <div class="section no-pad-bot" id="index-banner">
+    <div class="section no-pad-bot">
       <div class="container">
         <div class="center lhd-logo">
-          <img src="" alt="We need a logo">
+          <img src="img/strawman.png" alt="logo">
 	</div>
         <div class="row center intro col s12">
           <h4 style="color:black" class="header col s12 light lhd-details-0"><b>Geolocated Readtime News</b></h4>
@@ -73,25 +122,25 @@
     </div>
 
   </section>
-  <section>
+  <section id="Map">
     <div id="container" style="position: relative; width: 1400px; height: 800px; left:19%"></div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-    <script src="/datamaps.usa.js"></script>
+    <script src="datamaps.usa.js"></script>
 
 
     <script>
-var lawmap = new Datamap({
+    var lawmap = new Datamap({
     element: document.getElementById('container'),
     scope: 'usa',
     height: 750,
     width: 1200,
     geographyConfig: {
-    dataUrl: null, 
+    dataUrl: null,
     hideAntarctica: true,
     borderWidth: 1,
     borderColor: '#000',
-    popupTemplate: function(geography, data) { 
+    popupTemplate: function(geography, data) {
         return "<div class='hoverinfo'><strong>" + geography.properties.name + ' : ' + data.fillKey +'<br></br>' + data.newsdescription + '</strong></div>';
     },
     popupOnHover: true,
@@ -173,7 +222,7 @@ var lawmap = new Datamap({
             },
             "MA": {
                 "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now." 
+                "newsdescription": "We don't have news for this area right now."
             },
             "MN": {
                 "fillKey": "No News",
@@ -314,6 +363,11 @@ var lawmap = new Datamap({
         }
 });
     </script>
+    <script>
+    $('clickme').click(function {
+        searchComplete()
+    }
+    </script>
   </section>
 
   <!--  Scripts-->
@@ -335,4 +389,3 @@ var lawmap = new Datamap({
 
 </body>
 </html>
-

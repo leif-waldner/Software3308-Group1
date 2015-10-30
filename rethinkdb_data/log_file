@@ -1,0 +1,19 @@
+2015-10-12T17:37:47.244650953 0.090592s notice: Recursively removing directory /home/leif/Dropbox/Software3308-Group1/rethinkdb_data/tmp
+2015-10-12T17:37:47.299523178 0.145466s notice: Initializing directory /home/leif/Dropbox/Software3308-Group1/rethinkdb_data
+2015-10-12T17:37:47.299608310 0.145548s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/leif/Dropbox/Software3308-Group1/rethinkdb_data' did not already exist or is empty.)
+2015-10-12T17:37:47.299627005 0.145567s notice: Running rethinkdb 2.1.2~0vivid (GCC 4.9.2)...
+2015-10-12T17:37:47.302798692 0.148741s notice: Running on Linux 3.19.0-26-generic x86_64
+2015-10-12T17:37:47.302866448 0.148806s notice: Loading data from directory /home/leif/Dropbox/Software3308-Group1/rethinkdb_data
+2015-10-12T17:37:47.750405537 0.596346s info: Automatically using cache size of 2397 MB
+2015-10-12T17:37:47.751105010 0.597045s notice: Listening for intracluster connections on port 29015
+2015-10-12T17:37:47.751863853 0.597804s notice: Listening for client driver connections on port 28015
+2015-10-12T17:37:47.751957855 0.597898s notice: Listening for administrative HTTP connections on port 8080
+2015-10-12T17:37:47.751959274 0.597899s notice: Listening on addresses: 127.0.0.1, 127.0.1.1, ::1
+2015-10-12T17:37:47.751959463 0.597899s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2015-10-12T17:37:47.751960491 0.597900s notice: Server ready, "leif_Lenovo_Y50_70_Touch_c0g" a8227841-dcc9-4858-a066-51fb078c6670
+2015-10-12T17:37:48.065185427 0.911126s notice: A newer version of the RethinkDB server is available: 2.1.5-2. You can read the changelog at <https://github.com/rethinkdb/rethinkdb/releases>.
+2015-10-12T17:38:23.625762106 36.471702s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2015-10-12T17:38:23.625850694 36.471791s notice: Shutting down client connections...
+2015-10-12T17:38:23.625905251 36.471845s notice: All client connections closed.
+2015-10-12T17:38:23.625906840 36.471847s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2015-10-12T17:38:23.626842078 36.472782s notice: Storage engine shut down.
