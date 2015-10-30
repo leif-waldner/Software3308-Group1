@@ -43,3 +43,29 @@ for ($i=0; $i<=2; $i++) {
   echo ($item_desc . "</p>");
 }
 ?>
+<?php
+//connect to database
+$username = "user";
+$password = "pass";
+$dbname = "news_system";
+echo "this is after connection";
+$connection = new mysqli($servername, $username, $password, $dbname);
+if ($connection) {
+$sql = "SELECT title, text1  FROM news";
+$result = $connection->query($sql);
+while($row = $result->fetch_assoc()) {
+         echo "<br> news: ". $row["title"]. " - title: ". $row["text1"]. " " . "<br>";
+     }
+
+// Escape user inputs for security
+$channel_title = $connection->real_escape_string($channel_title);
+$channel_link=$connection->real_escape_string($channel_link);
+$channel_desc=$connection->real_escape_string($channel_desc);
+$SQL = "INSERT INTO news(title, dtime,link, text1)  VALUES ('$channel_title', NOW(), '$channel_link','$channel_desc')";
+$result =$connection->query($SQL);
+}
+$connection->close();
+ // Closing Connection with Server
+?>
+
+
