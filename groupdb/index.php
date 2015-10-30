@@ -1,6 +1,6 @@
 <html>
 <head>
- <title>US Map Demo</title>
+ <title>US Map News</title>
 
         <style>
           #alert {
@@ -41,6 +41,7 @@
                 .stop()
                 .css('backgroundColor', '#ff0')
                 .animate({backgroundColor: '#ddd'}, 1000);
+                showRSS("Colorado");
             }
           });
 
@@ -60,6 +61,7 @@
                 .stop()
                 .css('backgroundColor', '#af0')
                 .animate({backgroundColor: '#ddd'}, 1000);
+               showRSS("Colorado");
             }
           });
 
