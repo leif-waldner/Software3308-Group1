@@ -3,4 +3,6 @@ installed the following packages: php5, apache2, libapache-mod-php5
 ##copied everything to /var/www/html
 - Instead - add a symlink to this directory in /var/www/html. Then just change the URL you're using.
 
-For database: mysqli?
+For database: Please make sure run: sudo mysql -u user -p 
+you should set the password: pass
+then you can run: source News_sql.sql

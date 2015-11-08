@@ -111,13 +111,7 @@ function showRSS(str) {
   <div id="map2" style="width: 300px; height: 300px;"></div>
 -->
 
-<form>
-<select onchange="showRSS(this.value)">
-<option value="">Select an RSS-feed:</option>
-<option value="Colorado">Colorado</option>
-<option value="Arizona">Arizona</option>
-</select>
-</form>
+
 <br>
 <div id="rssOutput">RSS-feed will be listed here...</div>
 </body>
