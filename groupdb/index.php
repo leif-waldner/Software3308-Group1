@@ -1,6 +1,6 @@
 <html>
 <head>
- <title>US Map News</title>
+ <title>GeoNews</title>
 
         <style>
           #alert {
@@ -22,6 +22,7 @@
         <script>
         $(document).ready(function() {
           $('#map').usmap({
+            /*
             'stateSpecificStyles': {
               'AK' : {fill: '#f00'}
             },
@@ -33,18 +34,21 @@
                 //return false;
               }
             },
+            */
 
-
+            // This is where the rss/clicking link is made.
             'click' : function(event, data) {
               $('#alert')
                 .text('Click '+data.name+' on map 1')
                 .stop()
                 .css('backgroundColor', '#ff0')
                 .animate({backgroundColor: '#ddd'}, 1000);
-                showRSS("Colorado");
+                console.log("calling showRSS dataname is: ", data.name);
+                console.log(states[data.name]);
+                showRSS(states[data.name]);
             }
           });
-
+/*
           $('#map2').usmap({
             'stateStyles': {
               fill: '#025',
@@ -54,7 +58,7 @@
             'stateHoverStyles': {
               fill: 'teal'
             },
-
+            // This is where the rss/clicking link is made
             'click' : function(event, data) {
               $('#alert')
                 .text('Click '+data.name+' on map 2')
@@ -72,13 +76,13 @@
           $('#out-md').click(function(event){
             $('#map').usmap('trigger', 'MD', 'mouseout', event);
           });
-        });
+*/        });
         </script>
 
 
 <script>
 function showRSS(str) {
-  if (str.length==0) { 
+  if (str.length==0) {
     document.getElementById("rssOutput").innerHTML="";
     return;
   }
@@ -99,12 +103,13 @@ function showRSS(str) {
 </script>
 </head>
 <body>
- <div id="alert">Click alerts</div>
+ <div id="alert">Select a State</div>
 
-  <div id="map" style="width: 930px; height: 630px; border: solid 3px red;"></div>
+  <div id="map" style="width: 930px; height: 630px;"></div>
 
-  <button id="over-md">mouseover MD</button> <button id="out-md">mouseout MD</button>
+<!--  <button id="over-md">mouseover MD</button> <button id="out-md">mouseout MD</button>
   <div id="map2" style="width: 300px; height: 300px;"></div>
+-->
 
 <form>
 <select onchange="showRSS(this.value)">
@@ -118,3 +123,58 @@ function showRSS(str) {
 </body>
 </html>
 
+<script type="text/javascript">
+var states = {
+    'AL':'Alabama',
+    'AK':'Alaska',
+    'AZ':'Arizona',
+    'AR':'Arkansas',
+    'CA':'California',
+    'CO':'Colorado',
+    'CT':'Connecticut',
+    'DE':'Delaware',
+    'DC':'District of Columbia',
+    'FL':'Florida',
+    'GA':'Georgia',
+    'HI':'Hawaii',
+    'ID':'Idaho',
+    'IL':'Illinois',
+    'IN':'Indiana',
+    'IA':'Iowa',
+    'KS':'Kansas',
+    'KY':'Kentucky',
+    'LA':'Louisiana',
+    'ME':'Maine',
+    'MD':'Maryland',
+    'MA':'Massachusetts',
+    'MI':'Michigan',
+    'MN':'Minnesota',
+    'MS':'Mississippi',
+    'MO':'Missouri',
+    'MT':'Montana',
+    'NE':'Nebraska',
+    'NV':'Nevada',
+    'NH':'New Hampshire',
+    'NJ':'New Jersey',
+    'NM':'New Mexico',
+    'NY':'New York',
+    'NC':'North Carolina',
+    'ND':'North Dakota',
+    'OH':'Ohio',
+    'OK':'Oklahoma',
+    'OR':'Oregon',
+    'PA':'Pennsylvania',
+    'RI':'Rhode Island',
+    'SC':'South Carolina',
+    'SD':'South Dakota',
+    'TN':'Tennessee',
+    'TX':'Texas',
+    'UT':'Utah',
+    'VT':'Vermont',
+    'VA':'Virginia',
+    'WA':'Washington',
+    'WV':'West Virginia',
+    'WI':'Wisconsin',
+    'WY':'Wyoming',
+};
+</script>
