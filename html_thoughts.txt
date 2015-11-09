@@ -1,0 +1,29 @@
+These are my thoughts things to add to our website. AKA fluff and stuff
+
+1. Scrollable Text Box
+allows for longer things to appear in our popups over states.
+source, and help: http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/
+
+2. Background Images to Text
+This could be cool for specific applications
+source: http://www.makeuseof.com/tag/7-cool-html-effects-that-anyone-can-add-to-their-website-nb/
+
+3. Gradient Shadow Div Boxes:
+This is pretty much self explanatory. I pretty much just want to see how
+one does this and if it is cool at all.
+source: http://coolhomepages.com/How-to-make-easy-gradient-shadow-CSS-DIV-boxes/blog-48.html
+
+
+4. Div side bar
+This could be a side bar showing the most current/popular news. Like a trending item
+on the facebook page.
+The link below is a starting spot but much more would be needed to get what
+I would want.
+source: http://www.w3schools.com/html/html_layout.asp
+
+:
+
+These are links to help me better understand how a website is created and how html interacts with CSS and such. Basically a my references page
+so when I go to try and implement some of these things I have  starting spot. 
+reference
+http://www.debbietdesigns.com/learn/32/xhtml-div-tag/
