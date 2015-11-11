@@ -1,10 +1,10 @@
-
 $(document).ready(function() {
   $('#map').usmap({
     'click' : function(event, data) {
         //add function for states[data.name] and test to make sure that that's alright
         //add test to make sure showRSS returned something correctly for this function.
-        showRSS(states[data.name]);
+        var state = getName(data.name);
+        showRSS(state);
     }
   });
 });
@@ -83,3 +83,9 @@ var states = {
     'WI':'Wisconsin',
     'WY':'Wyoming',
 };
+
+
+function getName(abbr) {
+  var ret = states[abbr];
+  return ret;
+}
