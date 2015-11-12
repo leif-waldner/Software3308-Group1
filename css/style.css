@@ -113,7 +113,7 @@ nav a:hover {
   font-size: 19px;
 }
 
-h6.lhd-event-date {
+.lhd-event-date h6 {
     color: #fff;
     font-size: 16px;
     margin-bottom: 20px;
@@ -173,7 +173,7 @@ h6.lhd-event-date {
   margin: auto;
 }
 
-.about-details p {
+.about-details p  {
     color: #4a4d4d;
     font-size: 23px;
     line-height: 2em;

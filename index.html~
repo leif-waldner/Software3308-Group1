@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <title>Geolocated Realtime News</title>
+
+  <!-- Favicon -->
+
+  <!-- CSS  -->
+  <link href="css/normalize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/select2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <!-- Open Graph -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+  <script src="https://www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+    // This code generates a "Raw Searcher" to handle search queries. The Raw
+    // Searcher requires you to handle and draw the search results manually.
+    google.load('search', '1');
+
+    var newsSearch;
+
+    function searchComplete() {
+
+        // Check that we got results
+        document.getElementById('content').innerHTML = '';
+        if (newsSearch.results && newsSearch.results.length > 0) {
+            for (var i = 0; i < newsSearch.results.length; i++) {
+
+                // Create HTML elements for search results
+                var p = document.createElement('p');
+                var a = document.createElement('a');
+                a.href="/news-search/v1/newsSearch.results[i].url;"
+                    a.innerHTML = newsSearch.results[i].title;
+
+                // Append search results to the HTML nodes
+                p.appendChild(a);
+                document.body.appendChild(p);
+            }
+        }
+    }
+
+    function onLoad() {
+
+        // Create a News Search instance.
+        newsSearch = new google.search.NewsSearch();
+
+        // Set searchComplete as the callback function when a search is
+        // complete.  The newsSearch object will have results in it.
+        newsSearch.setSearchCompleteCallback(this, searchComplete, null);
+
+        // Specify search quer(ies)
+        newsSearch.execute('Barack Obama');
+
+        // Include the required Google branding
+        google.search.Search.getBranding('branding');
+    }
+    // Set a callback to call your code when the page loads
+google.setOnLoadCallback(onLoad);
+
+  </script>
+</head>
+<body>
+  <section id="hello" class="hello-opener">
+    <nav class="navi-skrollz" role="navigation">
+      <div class="nav-wrapper container">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#hello">Hello</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#map">Map</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="origi-nav" role="navigation">
+      <div class="nav-wrapper container">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#hello">Hello</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#map">Map</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="center lhd-logo">
+          <img src="img/strawman.png" alt="logo">
+	</div>
+        <div class="row center intro col s12">
+          <h4 style="color:black" class="header col s12 light lhd-details-0"><b>Geolocated Readtime News</b></h4>
+          <h5 style="color:black" class="header col s12 light lhd-details-0"></h5>
+        </div>
+        <div class="row center continue hide-on-small-only">
+          <a href="#about"><i class="fa fa-caret-down" style="color:black"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about" class="bg-light-gray">
+    <div class="bottom-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="intro col s12">
+            <h4 class="center-align">About</h4>
+            <h3 class="center-align">What are you talking about?</h3>
+          </div>
+
+          <div class="line-divider col s12">
+            <div class="line-twerk">
+            </div>
+          </div>
+          <div class="about-details center-align col s12">
+            <p>Becoming more nationally aware can be difficult. Often we only view the first page of our news site to see broad eye-catching headlines, and miss important events that weren't displayed. Our goal was to make news location-based. We will do our best to make all news displayed as current and realistic as possible.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section id="Map">
+    <div id="container" style="position: relative; width: 1400px; height: 800px; left:19%"></div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="datamaps.usa.js"></script>
+
+
+    <script>
+    var lawmap = new Datamap({
+    element: document.getElementById('container'),
+    scope: 'usa',
+    height: 750,
+    width: 1200,
+    geographyConfig: {
+    dataUrl: null,
+    hideAntarctica: true,
+    borderWidth: 1,
+    borderColor: '#000',
+    popupTemplate: function(geography, data) {
+        return "<div class='hoverinfo'><strong>" + geography.properties.name + ' : ' + data.fillKey +'<br></br>' + data.newsdescription + '</strong></div>';
+    },
+    popupOnHover: true,
+    highlightOnHover: true,
+    highlightFillColor: '#B3F6E3',
+    highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
+    highlightBorderWidth: 2
+    },
+
+    fills: {
+    'No News': '#f9f5dc',
+    defaultFill: '#f9f5dc',
+    },
+
+    data:{
+            "AZ": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "CO": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "DE": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "FL": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "GA": {
+                "fillKey": "No News",
+                 "newsdescription": "We don't have news for this area right now."
+            },
+            "HI": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "ID": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "IL": {
+                "fillKey": "No News",
+                 "newsdescription": "We don't have news for this area right now."
+            },
+            "IN": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "IA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "KS": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "KS": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "KY": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "LA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MD": {
+                "fillKey": "No News",
+                 "newsdescription": "We don't have news for this area right now."
+            },
+            "ME": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MN": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MI": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MS": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MO": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "MT": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NC": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NE": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NV": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NH": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NJ": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NY": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "ND": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "NM": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "OH": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "OK": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "OR": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "PA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "RI": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "SC": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "SD": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "TN": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "TX": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "UT": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "WI": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "VA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "VT": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "WA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "WV": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "WY": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "CA": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "CT": {
+                "fillKey": "No News",
+                "newsdescription": "We don't have news for this area right now."
+            },
+            "AK": {
+               "fillKey": "No News",
+               "newsdescription": "We don't have news for this area right now."
+            },
+            "AR": {
+               "fillKey": "No News",
+               "newsdescription": "We don't have news for this area right now."
+            },
+            "AL": {
+               "fillKey": "No News",
+               "newsdescription": "We don't have news for this area right now."
+            }
+        }
+});
+    </script>
+    <script>
+    $('clickme').click(function {
+        searchComplete()
+    }
+    </script>
+  </section>
+
+  <!--  Scripts-->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43729070-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/select2.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+</html>
