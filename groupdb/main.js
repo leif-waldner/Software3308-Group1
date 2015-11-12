@@ -1,14 +1,3 @@
-$(document).ready(function() {
-  $('#map').usmap({
-    'click' : function(event, data) {
-        //add function for states[data.name] and test to make sure that that's alright
-        //add test to make sure showRSS returned something correctly for this function.
-        var state = getName(data.name);
-        showRSS(state);
-    }
-  });
-});
-
 function showRSS(str) {
   if (str.length==0) {
     document.getElementById("rssOutput").innerHTML="";
@@ -28,6 +17,11 @@ function showRSS(str) {
   //can add test for correct getrss.php?q=STATENAME
   xmlhttp.open("GET","getrss.php?q="+str,true);
   xmlhttp.send();
+}
+
+function getName(abbr) {
+  var ret = states[abbr];
+  return ret;
 }
 
 var states = {
@@ -83,9 +77,3 @@ var states = {
     'WI':'Wisconsin',
     'WY':'Wyoming',
 };
-
-
-function getName(abbr) {
-  var ret = states[abbr];
-  return ret;
-}
