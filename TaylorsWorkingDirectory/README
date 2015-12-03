@@ -1,0 +1,15 @@
+installed the following packages: php5, apache2, libapache-mod-php5
+
+##copied everything to /var/www/html
+- Instead - add a symlink to this directory in /var/www/html. (sudo ln -s /home/<path_to_git_repo>/groupdb /var/www/html/groupdb) Then go to localhost/groupdb/index.php.
+
+Install database: sudo apt-get install php-mysql
+Note - you made need to add: extension=mysqli.so to /etc/php5/apache2/php.ini on line 867
+
+For database: Please make sure run: sudo mysql -u user -p 
+you should set the password: pass
+You might need to run: source News_sql.sql
+Make sure you grant privileges on the database to user
+
+
+

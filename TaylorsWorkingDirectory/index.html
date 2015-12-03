@@ -7,13 +7,13 @@
   <title>GeoReport.com</title> 
   <meta name="description" content=""> 
   <!--<meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
-  <link rel="stylesheet" href="styles/vendor.04b313cc.css">
-  <link rel="stylesheet" href="styles/main.05619b0d.css"> 
+  <link rel="stylesheet" href="styles/vendor.css">
+  <link rel="stylesheet" href="styles/main.css"> 
   <!-- <base href="/"> <link rel="icon" href="//d2c87l0yth4zbw.cloudfront.net/i/_global/favicon.png"> <!-- Open Graph data --> 
 
 </head>
 <body>
-  <div class="site-content-container">
+  <div class="site-content-container" style='background-image: url("img/side_earth.jpg"); background-repeat: repeat; background-size:cover;'>
     <div class="main-content">
       <header>
       <img src='strawman.png' />
@@ -28,275 +28,38 @@
     
   <footer ng-include="'partials/footer.html'"></footer>
 </body> 
-<section id="Map"  style='background-image: url("img/bkg.jpg"); background-repeat: no-repeat; background-size:cover'>
-    <div id="container" style="position: relative; width: 1400px; height: 800px; left:10%; opacity: .6"></div>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-    <script src="datamaps.usa.js"></script>
 
-
-    <script>
-    var lawmap = new Datamap({
-    element: document.getElementById('container'),
-    scope: 'usa',
-    height: 750,
-    width: 1200,
-    geographyConfig: {
-    dataUrl: null,
-    hideAntarctica: true,
-    borderWidth: 2,
-    borderColor: '#FFF',
     
-    popupTemplate: function(geography, data) {
-        return "<div class='hoverinfo'><strong>" + geography.properties.name + ' : ' + data.fillKey +'<br></br>' + data.newsdescription + '</strong></div>';
-    },
-    popupOnHover: true,
-    highlightOnHover: true,
-    highlightFillColor: '#B3F6E3',
-    highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
-    highlightBorderWidth: 2
-    },
-
-    fills: {
-    'No News': '#000000',
-    defaultFill: '#000000',
-    },
-
-    data:{
-            "AZ": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "CO": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "DE": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "FL": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "GA": {
-                "fillKey": "No News",
-                 "newsdescription": "We don't have news for this area right now."
-            },
-            "HI": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "ID": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "IL": {
-                "fillKey": "No News",
-                 "newsdescription": "We don't have news for this area right now."
-            },
-            "IN": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "IA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "KS": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "KS": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "KY": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "LA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MD": {
-                "fillKey": "No News",
-                 "newsdescription": "We don't have news for this area right now."
-            },
-            "ME": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MN": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MI": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MS": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MO": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "MT": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NC": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NE": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NV": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NH": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NJ": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NY": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "ND": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "NM": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "OH": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "OK": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "OR": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "PA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "RI": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "SC": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "SD": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "TN": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "TX": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "UT": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "WI": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "VA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "VT": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "WA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "WV": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "WY": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "CA": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "CT": {
-                "fillKey": "No News",
-                "newsdescription": "We don't have news for this area right now."
-            },
-            "AK": {
-               "fillKey": "No News",
-               "newsdescription": "We don't have news for this area right now."
-            },
-            "AR": {
-               "fillKey": "No News",
-               "newsdescription": "We don't have news for this area right now."
-            },
-            "AL": {
-               "fillKey": "No News",
-               "newsdescription": "We don't have news for this area right now."
-            }
+    <style>
+        #alert {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          background-color: #ddd;
+          color: #333;
+          padding: 5px;
+          font-weight: bold;
         }
-});
-    </script>
+      </style>
+
+      <script src="raphael.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+      <script src="color.jquery.js"></script>
+      <script src="jquery.usmap.js"></script>
+      <script src="main.js"></script>
+
+      <script>
+      $(document).ready(function() {
+        $('#map').usmap({
+          'click' : function(event, data) {
+              //add test to make sure showRSS returned something correctly for this function.
+              var state = getName(data.name);
+              console.log("getName finds that", data.name, "is:", state);
+              showRSS(state);
+          }
+        });
+      });
+      </script>
 
 
-<!--
-    <main ng-class="$root.animationClass">
-
-      <div class="main-content">
-        <header ng-controller="HeaderCtrl" ng-include="'partials/header.html'"></header>
-        <div ng-view ng-click="$root.expanded = false" ></div>
-      </div>
-
-        <nav class="mobile-navigation" ng-controller="HeaderCtrl">
-            <a ng-repeat="link in links" ng-href="{{ link.path }}" ng-click="$root.expanded = false" ng-class="{current: (path === link.path)}">
-                {{ link.title }}
-            </a>
-        </nav>
-
-    </main> --> <!--  <main ng-class="$root.animationClass">
-
-
-
-        <header ng-controller="HeaderCtrl" ng-include="'partials/header.html'"></header>
-        <div ng-view ng-click="$root.expanded = false"></div>
-    </main>
-
-    <nav class="mobile-navigation" ng-controller="HeaderCtrl">
-        <a ng-repeat="link in links" ng-href="{{ link.path }}" ng-click="$root.expanded = false" ng-class="{current: (path === link.path)}">
-            {{ link.title }}
-         </a>
-     </nav>
- --> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->  
+  <div id="rssOutput">RSS-feed will be listed here...</div>
+  <div id="map" style="position: relative; width: 800px; height: 600px; left:0%; opacity: .6"></div>
