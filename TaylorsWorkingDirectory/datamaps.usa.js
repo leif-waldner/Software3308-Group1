@@ -23,7 +23,7 @@
     },
     popupOnHover: true,
     highlightOnHover: true,
-    highlightFillColor: '#FC8D59',
+    highlightFillColor: '#6EDBFF',
     highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
     highlightBorderWidth: 2
     },
