@@ -28,6 +28,7 @@
           'click' : function(event, data) {
               //add test to make sure showRSS returned something correctly for this function.
               var state = getName(data.name);
+              console.log("getName finds that", data.name, "is:", state);
               showRSS(state);
           }
         });
