@@ -1,7 +1,36 @@
-<html>
-  <head>
-    <title>GeoNews</title>
-      <style>
+<!doctype html> <html> 
+
+
+
+<head> 
+  <meta charset="utf-8"> 
+  <title>GeoReport.com</title> 
+  <meta name="description" content=""> 
+  <!--<meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> 
+  <link rel="stylesheet" href="styles/vendor.css">
+  <link rel="stylesheet" href="styles/main.css"> 
+  <!-- <base href="/"> <link rel="icon" href="//d2c87l0yth4zbw.cloudfront.net/i/_global/favicon.png"> <!-- Open Graph data --> 
+
+</head>
+<body>
+  <div class="site-content-container" style='background-image: url("img/side_earth.jpg"); background-repeat: repeat; background-size:cover;'>
+    <div class="main-content">
+      <header>
+      <img src='strawman.png' />
+      <font size="5">GeoReport</font>
+      <nav>
+       	<a style="border-left:1px solid white">
+       		USA</a><a class="navtabs">EARTH</a><a class="navtabs">SPACE</a><a class="navtabs">EU</a>
+
+      </nav>
+      </header>
+    </div>
+    
+  <footer ng-include="'partials/footer.html'"></footer>
+</body> 
+
+    
+    <style>
         #alert {
           font-family: Arial, Helvetica, sans-serif;
           font-size: 16px;
@@ -11,11 +40,7 @@
           font-weight: bold;
         }
       </style>
-      <!-- Unit Testing Framework -->
-      <!-- <link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-2.3.4/jasmine_favicon.png"> -->
-      <link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-2.3.4/jasmine.css">
 
-      <!-- End unit test framework -->
       <script src="raphael.js"></script>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
       <script src="color.jquery.js"></script>
@@ -35,11 +60,6 @@
       });
       </script>
 
-    </head>
-  <body>
-    <div id="alert">Select a State</div>
-    <div id="map" style="width: 930px; height: 630px;"></div>
-    <br>
-    <div id="rssOutput">RSS-feed will be listed here...</div>
-  </body>
-</html>
+
+  <div id="rssOutput">RSS-feed will be listed here...</div>
+  <div id="map" style="position: relative; width: 800px; height: 600px; left:0%; opacity: .6"></div>
