@@ -1,0 +1,24 @@
+Our project will be a website that displays geographically relevant real­time news. Upon opening the website the user will see a map of the United States. Each individual state will be selectable as the user’s mouse moves across the map. Once a state is clicked it will show the local real­time news headlines. The user can then click on the headlines to further investigate the story at their respective news sources. The purpose of the project is to generate a way for people to get news based on their interest in location instead of receiving news based on popularity.
+
+
+To run:
+
+
+-Make sure following packages are installed: php5, apache2, libapache-mod-php5.
+-Make sure apache is configured to run php
+-Move to directory GeoReport
+-Add a symlink from web directory (Ubuntu: /var/www/html, Mac OS: /Users/username/sites/) to the current directory
+Example: sudo ln –s /home/<path-to_current_dir>/GeoReport /var/www/html/GeoReport
+Mac example: ln –s /Users/username/<path_to_current_dir>/GeoReport /Users/username/Sites/GeoReport
+
+-Make sure sql is installed or install it:
+	sudo apt-get install php-mysql
+	Note: you may need to add: extension=mysql.so to /etc/php5/apache2/php.ini on line 867
+
+-username for mysql is: root, password is: pass, or change getrss.php  line 8 and 9 to the correct username and password.
+-next go to web browser and go to: localhost/GeoReport/index.php or on a Mac goto localhost/~username/GeoReport
+-Website should display
+
+
+
+
