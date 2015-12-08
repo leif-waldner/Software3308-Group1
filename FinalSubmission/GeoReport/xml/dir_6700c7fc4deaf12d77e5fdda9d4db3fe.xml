@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_6700c7fc4deaf12d77e5fdda9d4db3fe" kind="dir">
+    <compoundname>www.spotify-thedrop.com/scripts/vendor</compoundname>
+    <innerfile refid="www_8spotify-thedrop_8com_2scripts_2vendor_2isotope_8min_8js">isotope.min.js</innerfile>
+    <innerfile refid="www_8spotify-thedrop_8com_2scripts_2vendor_2ng-infinite-scroll_8min_8js">ng-infinite-scroll.min.js</innerfile>
+    <innerfile refid="www_8spotify-thedrop_8com_2scripts_2vendor_2tweenmax_8min_8js">tweenmax.min.js</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/www.spotify-thedrop.com/scripts/vendor/"/>
+  </compounddef>
+</doxygen>

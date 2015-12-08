@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="boot_8js" kind="file" language="Javascript">
+    <compoundname>boot.js</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="boot_8js_1a76ea1ee053f5ae2644fe133a009e6b55" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var env</definition>
+        <argsstring></argsstring>
+        <name>env</name>
+        <initializer>= jasmine.getEnv()</initializer>
+        <briefdescription>
+<para>Create the Jasmine environment. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is used to run all specs in a project. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="28" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1aacc88409fdf92170d7fb649b2b96a563" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var jasmineInterface</definition>
+        <argsstring></argsstring>
+        <name>jasmineInterface</name>
+        <initializer>= jasmineRequire.interface(jasmine, env)</initializer>
+        <briefdescription>
+<para><heading level="2">The Global Interface</heading>
+</para>        </briefdescription>
+        <detaileddescription>
+<para>Build up the functions that will be exposed as the Jasmine public interface. A project can customize, rename or alias any of these functions as desired, provided the implementation remains unchanged. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="35" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a171870626dbacd8f69880d746de7ead9" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var queryString</definition>
+        <argsstring></argsstring>
+        <name>queryString</name>
+        <initializer>= new jasmine.QueryString({
+    getWindowLocation: function() { return window.location; }
+  })</initializer>
+        <briefdescription>
+<para><heading level="2">Runner Parameters</heading>
+</para>        </briefdescription>
+        <detaileddescription>
+<para>More browser specific code - wrap the query string in an object and to allow for getting/setting parameters from the runner user interface. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="48" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a824b1cda70d2e99d28b45cfe9a2a7469" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var catchingExceptions</definition>
+        <argsstring></argsstring>
+        <name>catchingExceptions</name>
+        <initializer>= queryString.getParam(&quot;catch&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="52" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a8e77aa5357c9495e09712b861d32c321" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var throwingExpectationFailures</definition>
+        <argsstring></argsstring>
+        <name>throwingExpectationFailures</name>
+        <initializer>= queryString.getParam(&quot;throwFailures&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="55" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1af8a98c0391a6b470d9f4d4f6edde51c7" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var htmlReporter</definition>
+        <argsstring></argsstring>
+        <name>htmlReporter</name>
+        <initializer>= new jasmine.HtmlReporter({
+    env: env,
+    onRaiseExceptionsClick: function() { queryString.navigateWithNewParam(&quot;catch&quot;, !env.catchingExceptions()); },
+    onThrowExpectationsClick: function() { queryString.navigateWithNewParam(&quot;throwFailures&quot;, !env.throwingExpectationFailures()); },
+    addToExistingQueryString: function(key, value) { return queryString.fullStringWithNewParam(key, value); },
+    getContainer: function() { return document.body; },
+    createElement: function() { return document.createElement.apply(document, arguments); },
+    createTextNode: function() { return document.createTextNode.apply(document, arguments); },
+    timer: new jasmine.Timer()
+  })</initializer>
+        <briefdescription>
+<para><heading level="2">Reporters</heading>
+</para><para>The <computeroutput>HtmlReporter</computeroutput> builds all of the HTML UI for the runner page. </para>        </briefdescription>
+        <detaileddescription>
+<para>This reporter paints the dots, stars, and x&apos;s for specs, as well as all spec names and all failures (if any). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="62" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a17091e1c0416c9faeeb2dd63a33b4bb3" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>env specFilter</definition>
+        <argsstring></argsstring>
+        <name>specFilter</name>
+        <initializer>= new jasmine.HtmlSpecFilter({
+    filterString: function() { return queryString.getParam(&quot;spec&quot;); }
+  })</initializer>
+        <briefdescription>
+<para>Filter which specs will be run by matching the start of the full name against the <computeroutput>spec</computeroutput> query param. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="82" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a619d004395c481cc1032f1c3747a04b9" prot="public" static="no" mutable="no">
+        <type>window</type>
+        <definition>window setTimeout</definition>
+        <argsstring></argsstring>
+        <name>setTimeout</name>
+        <initializer>= window.setTimeout</initializer>
+        <briefdescription>
+<para>Setting up timing functions to be able to be overridden. </para>        </briefdescription>
+        <detaileddescription>
+<para>Certain browsers (Safari, IE 8, phantomjs) require this hack. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="93" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a810d0ceb38081cd3ca4c39b096dcaa26" prot="public" static="no" mutable="no">
+        <type>window</type>
+        <definition>window setInterval</definition>
+        <argsstring></argsstring>
+        <name>setInterval</name>
+        <initializer>= window.setInterval</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="94" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1ab37ff0db33a3bf80b0163adc40a58424" prot="public" static="no" mutable="no">
+        <type>window</type>
+        <definition>window clearTimeout</definition>
+        <argsstring></argsstring>
+        <name>clearTimeout</name>
+        <initializer>= window.clearTimeout</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="95" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a5ab25cb8f2b07d7b66e5baa00d82df67" prot="public" static="no" mutable="no">
+        <type>window</type>
+        <definition>window clearInterval</definition>
+        <argsstring></argsstring>
+        <name>clearInterval</name>
+        <initializer>= window.clearInterval</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="96" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a57122a46969b0f13ef243bdc2cbbd065" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>var currentWindowOnload</definition>
+        <argsstring></argsstring>
+        <name>currentWindowOnload</name>
+        <initializer>= window.onload</initializer>
+        <briefdescription>
+<para><heading level="2">Execution</heading>
+</para>        </briefdescription>
+        <detaileddescription>
+<para>Replace the browser window&apos;s <computeroutput>onload</computeroutput>, ensure it&apos;s called, and then run all of the loaded specs. This includes initializing the <computeroutput>HtmlReporter</computeroutput> instance and then executing the loaded Jasmine environment. All of this will happen after all of the specs are loaded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="103" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="boot_8js_1a43397fd3516cd230995b3edbbadff48b" prot="public" static="no" mutable="no">
+        <type>window</type>
+        <definition>window onload</definition>
+        <argsstring></argsstring>
+        <name>onload</name>
+        <initializer>= function() {
+    if (currentWindowOnload) {
+      currentWindowOnload();
+    }
+    htmlReporter.initialize();
+    env.execute();
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="105" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="boot_8js_1a8d7c2900728d1ef7320cc5561d8c0a86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>function jasmineRequire</type>
+        <definition>function jasmineRequire html</definition>
+        <argsstring>(jasmine)</argsstring>
+        <name>html</name>
+        <param>
+          <type>jasmine</type>
+          <defname>jasmine</defname>
+        </param>
+        <briefdescription>
+<para>Starting with version 2.0, this file &quot;boots&quot; Jasmine, performing all of the necessary initialization before executing the loaded environment and all of a project&apos;s specs. </para>        </briefdescription>
+        <detaileddescription>
+<para>This file should be loaded after <computeroutput>jasmine.js</computeroutput> and <computeroutput>jasmine_html.js</computeroutput>, but before any project source files or spec files are loaded. Thus this file can also be used to customize Jasmine for a project.</para><para>If a project is using Jasmine via the standalone distribution, this file can be customized directly. If a project is using Jasmine via the <ulink url="http://github.com/pivotal/jasmine-gem">Ruby gem</ulink>, this file can be copied into the support directory via <computeroutput>jasmine copy_boot_js</computeroutput>. Other environments (e.g., Python) will have different mechanisms.</para><para>The location of <computeroutput>boot.js</computeroutput> can be specified and/or overridden in <computeroutput>jasmine.yml</computeroutput>.</para><para>Since this is being run in a browser and the results should populate to an HTML page, require the HTML-specific Jasmine code, injecting the same reference. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="boot_8js_1a85f28ca67602153f8329b5d46a9da0c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>function extend</definition>
+        <argsstring>(window, jasmineInterface)</argsstring>
+        <name>extend</name>
+        <param>
+          <type>window</type>
+          <defname>window</defname>
+        </param>
+        <param>
+          <type>jasmineInterface</type>
+          <defname>jasmineInterface</defname>
+        </param>
+        <briefdescription>
+<para>Add all of the Jasmine global/public interface to the global scope, so a project can use the public interface directly. </para>        </briefdescription>
+        <detaileddescription>
+<para>Helper function for readability above.</para><para>For example, calling <computeroutput>describe</computeroutput> in specs instead of <computeroutput>jasmine.getEnv().describe</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="40" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="boot_8js_1a01a4197d1d72b89acfe2323eda0149f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>env</type>
+        <definition>env catchExceptions</definition>
+        <argsstring>(typeof catchingExceptions===&quot;undefined&quot;?true:catchingExceptions)</argsstring>
+        <name>catchExceptions</name>
+        <param>
+          <type>typeof</type>
+          <declname>catchingExceptions</declname>
+          <defval>==&quot;undefined&quot;?true:catchingExceptions</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="boot_8js_1a665d8291ec70987c57a899a65965cbf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>env</type>
+        <definition>env throwOnExpectationFailure</definition>
+        <argsstring>(throwingExpectationFailures)</argsstring>
+        <name>throwOnExpectationFailure</name>
+        <param>
+          <type>throwingExpectationFailures</type>
+          <defname>throwingExpectationFailures</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="boot_8js_1abc8263fc03abcaa946afc6ac6b1a541e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>env</type>
+        <definition>env addReporter</definition>
+        <argsstring>(jasmineInterface.jsApiReporter)</argsstring>
+        <name>addReporter</name>
+        <param>
+          <type>jasmineInterface.</type>
+          <declname>jsApiReporter</declname>
+        </param>
+        <briefdescription>
+<para>The <computeroutput>jsApiReporter</computeroutput> also receives spec results, and is used by any environment that needs to extract the results from JavaScript. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="boot_8js_1a281bb30688702db833b93606e249a3b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>env</type>
+        <definition>env addReporter</definition>
+        <argsstring>(htmlReporter)</argsstring>
+        <name>addReporter</name>
+        <param>
+          <type>htmlReporter</type>
+          <defname>htmlReporter</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js" line="77" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="normal">(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>window.jasmine<sp/>=<sp/>jasmineRequire.core(jasmineRequire);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>jasmineRequire.html(jasmine);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>var<sp/>env<sp/>=<sp/>jasmine.getEnv();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>var<sp/>jasmineInterface<sp/>=<sp/>jasmineRequire.interface(jasmine,<sp/>env);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>extend(window,<sp/>jasmineInterface);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>var<sp/>queryString<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>jasmine.QueryString({</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>getWindowLocation:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>window.location;<sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>var<sp/>catchingExceptions<sp/>=<sp/>queryString.getParam(</highlight><highlight class="stringliteral">&quot;catch&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>env.catchExceptions(typeof<sp/>catchingExceptions<sp/>===<sp/></highlight><highlight class="stringliteral">&quot;undefined&quot;</highlight><highlight class="normal"><sp/>?<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>:<sp/>catchingExceptions);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>var<sp/>throwingExpectationFailures<sp/>=<sp/>queryString.getParam(</highlight><highlight class="stringliteral">&quot;throwFailures&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>env.throwOnExpectationFailure(throwingExpectationFailures);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>var<sp/>htmlReporter<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>jasmine.HtmlReporter({</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>env:<sp/>env,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>onRaiseExceptionsClick:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/>queryString.navigateWithNewParam(</highlight><highlight class="stringliteral">&quot;catch&quot;</highlight><highlight class="normal">,<sp/>!env.catchingExceptions());<sp/>},</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>onThrowExpectationsClick:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/>queryString.navigateWithNewParam(</highlight><highlight class="stringliteral">&quot;throwFailures&quot;</highlight><highlight class="normal">,<sp/>!env.throwingExpectationFailures());<sp/>},</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>addToExistingQueryString:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(key,<sp/>value)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>queryString.fullStringWithNewParam(key,<sp/>value);<sp/>},</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>getContainer:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>document.body;<sp/>},</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>createElement:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>document.createElement.apply(document,<sp/>arguments);<sp/>},</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>createTextNode:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>document.createTextNode.apply(document,<sp/>arguments);<sp/>},</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>timer:<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>jasmine.Timer()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>env.addReporter(jasmineInterface.jsApiReporter);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>env.addReporter(htmlReporter);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>var<sp/>specFilter<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>jasmine.HtmlSpecFilter({</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>filterString:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>queryString.getParam(</highlight><highlight class="stringliteral">&quot;spec&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>env.specFilter<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(spec)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>specFilter.matches(spec.getFullName());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>window.setTimeout<sp/>=<sp/>window.setTimeout;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>window.setInterval<sp/>=<sp/>window.setInterval;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>window.clearTimeout<sp/>=<sp/>window.clearTimeout;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>window.clearInterval<sp/>=<sp/>window.clearInterval;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>var<sp/>currentWindowOnload<sp/>=<sp/>window.onload;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>window.onload<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentWindowOnload)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>currentWindowOnload();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>htmlReporter.initialize();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>env.execute();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>extend(destination,<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(var<sp/>property<sp/>in<sp/>source)<sp/>destination[property]<sp/>=<sp/>source[property];</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>destination;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}());</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/lib/jasmine-2.3.4/boot.js"/>
+  </compounddef>
+</doxygen>

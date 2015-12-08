@@ -1,3 +1,7 @@
+/** @file
+ * These are our simple unit test cases using
+ * jasmine for javscript unit testing
+ */
 describe("My first test", function(){
   it("expects true to be true", function(){
     expect(true).toBe(true);

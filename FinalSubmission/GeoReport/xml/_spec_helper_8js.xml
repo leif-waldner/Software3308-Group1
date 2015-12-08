@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="_spec_helper_8js" kind="file" language="Javascript">
+    <compoundname>SpecHelper.js</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_spec_helper_8js_1a96f5e4782dd8110dd170ce97710dc8f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>beforeEach</definition>
+        <argsstring>(function(){jasmine.addMatchers({toBePlaying:function(){return{compare:function(actual, expected){var player=actual;return{pass:player.currentlyPlayingSong===expected &amp;&amp;player.isPlaying};}};}});})</argsstring>
+        <name>beforeEach</name>
+        <param>
+          <type>function(){jasmine.addMatchers({toBePlaying:function(){return{compare:function(actual, expected){var player=actual;return{pass:player.currentlyPlayingSong===expected &amp;&amp;player.isPlaying};}};}});}</type>
+          <defname>function(){jasmine.addMatchers({toBePlaying:function(){return{compare:function(actual, expected){var player=actual;return{pass:player.currentlyPlayingSong===expected &amp;&amp;player.isPlaying};}};}});}</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/spec/SpecHelper.js" line="1" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">beforeEach(</highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/>jasmine.addMatchers({</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>toBePlaying:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compare:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>(actual,<sp/>expected)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>player<sp/>=<sp/>actual;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pass:<sp/>player.currentlyPlayingSong<sp/>===<sp/>expected<sp/>&amp;&amp;<sp/>player.isPlaying</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">});</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/spec/SpecHelper.js"/>
+  </compounddef>
+</doxygen>

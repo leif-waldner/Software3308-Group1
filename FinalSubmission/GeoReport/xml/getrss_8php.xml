@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="getrss_8php" kind="file" language="PHP">
+    <compoundname>getrss.php</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="getrss_8php_1abb0f8f809252372e25f48d52b63ef29d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$q</definition>
+        <argsstring></argsstring>
+        <name>$q</name>
+        <initializer>=$_GET[&quot;q&quot;]</initializer>
+        <briefdescription>
+<para>get the q parameter from URL </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="7" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1ad79b54e31bd1050001133c4d70f850fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$servername</definition>
+        <argsstring></argsstring>
+        <name>$servername</name>
+        <initializer>= &quot;localhost&quot;</initializer>
+        <briefdescription>
+<para>Make sure you have the database in user with the correct passord!!! connect to database. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="11" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <initializer>= &quot;root&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="12" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <initializer>= &quot;pass&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="13" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1ac5111a571fffa2499732833bb7f0d8c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$dbname</definition>
+        <argsstring></argsstring>
+        <name>$dbname</name>
+        <initializer>= &quot;news_system&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="14" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$connection</definition>
+        <argsstring></argsstring>
+        <name>$connection</name>
+        <initializer>= new mysqli($servername, $username, $password, $dbname)</initializer>
+        <briefdescription>
+<para>echo &quot;this is after connection&quot;; </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="16" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a047170d6020a882807665812a27e2525" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$sql</definition>
+        <argsstring></argsstring>
+        <name>$sql</name>
+        <initializer>=&quot;delete from news where DATE_ADD(dtime, INTERVAL 10 MINUTE)&lt;now()&quot;</initializer>
+        <briefdescription>
+<para>delete the news older than 10 mins </para>        </briefdescription>
+        <detaileddescription>
+<para>Now check news with the selected state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="18" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$result</definition>
+        <argsstring></argsstring>
+        <name>$result</name>
+        <initializer>=$connection-&gt;query($sql) or die (&quot;Error in query: $sql. &quot;.mysql_error())</initializer>
+        <briefdescription>
+<para>execute query </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="19" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a28ce50e914c2968ab9495fdd1514c759" prot="public" static="no" mutable="no">
+        <type>if(mysqli_num_rows($result) &gt; 0)</type>
+        <definition>if (mysqli_num_rows($result) &gt; 0) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+echo &quot;Table is Empty,call <ref refid="main_8js_1abd5b84a0e5ceb32a7f5328841b17efc2" kindref="member">showRSS</ref>() and insert news  into databases&quot;</initializer>
+        <briefdescription>
+<para>see if any rows were returned $rowcount=mysqli_num_rows($result); printf(&quot;Result set has %d rows.\n&quot;,$rowcount); </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="37" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1a65da3e0f56ba18bb8875e687debf6c12" prot="public" static="no" mutable="no">
+        <type>if($q)</type>
+        <definition>if ($q) $xmlDoc</definition>
+        <argsstring></argsstring>
+        <name>$xmlDoc</name>
+        <initializer>= new DOMDocument()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="43" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="getrss_8php_1af3a16c5f0dd7a74cf9acf6a49fff73a7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$x</definition>
+        <argsstring></argsstring>
+        <name>$x</name>
+        <initializer>=$xmlDoc-&gt;getElementsByTagName(&apos;item&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" line="46" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is our php for getting and retrieving rss-feed from our sql database. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="getrss_8php_1abb0f8f809252372e25f48d52b63ef29d" kindref="member">$q</ref>=$_GET[</highlight><highlight class="stringliteral">&quot;q&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="getrss_8php_1ad79b54e31bd1050001133c4d70f850fe" kindref="member">$servername</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">$username<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;root&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">$password<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;pass&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">$dbname<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;news_system&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>mysqli(<ref refid="getrss_8php_1ad79b54e31bd1050001133c4d70f850fe" kindref="member">$servername</ref>,<sp/>$username,<sp/>$password,<sp/>$dbname);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="getrss_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>=</highlight><highlight class="stringliteral">&quot;delete<sp/>from<sp/>news<sp/>where<sp/>DATE_ADD(dtime,<sp/>INTERVAL<sp/>10<sp/>MINUTE)&lt;now()&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>=<ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;query(<ref refid="getrss_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>)<sp/>or<sp/>die<sp/>(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>query:<sp/>$sql.<sp/>&quot;</highlight><highlight class="normal">.mysql_error());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="getrss_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;SELECT<sp/>title<sp/><sp/>FROM<sp/>news<sp/>where<sp/>title<sp/>like<sp/>&apos;%$q%&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;query(<ref refid="getrss_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>)<sp/>or<sp/>die<sp/>(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>query:<sp/>$sql.<sp/>&quot;</highlight><highlight class="normal">.mysql_error());</highlight></codeline>
+<codeline lineno="28"><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysqli_num_rows(<ref refid="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>)<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;Table<sp/>is<sp/>not<sp/><sp/>Empty,<sp/>get<sp/>news<sp/>from<sp/>the<sp/>database&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="getrss_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>=</highlight><highlight class="stringliteral">&quot;SELECT<sp/>title,<sp/>text1<sp/><sp/>FROM<sp/>news<sp/>WHERE<sp/>title<sp/>like<sp/>&apos;%$q%&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<sp/><ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;query(<ref refid="getrss_8php_1a047170d6020a882807665812a27e2525" kindref="member">$sql</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">($row<sp/>=<sp/>mysqli_fetch_array(<ref refid="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/></highlight><highlight class="stringliteral">&quot;&lt;br&gt;<sp/>news:<sp/>&quot;</highlight><highlight class="normal">.<sp/>$row[</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">].<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>title:<sp/>&quot;</highlight><highlight class="normal">.<sp/>$row[</highlight><highlight class="stringliteral">&quot;text1&quot;</highlight><highlight class="normal">].<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&lt;br&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">echo<sp/></highlight><highlight class="stringliteral">&quot;Table<sp/>is<sp/>Empty,call<sp/>showRSS()<sp/>and<sp/>insert<sp/>news<sp/><sp/>into<sp/>databases&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="getrss_8php_1abb0f8f809252372e25f48d52b63ef29d" kindref="member">$q</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>$xml=(</highlight><highlight class="stringliteral">&quot;http://news.google.com/news?q={$q}&amp;output=rss&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">$xmlDoc<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DOMDocument();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">$xmlDoc-&gt;load($xml);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">$x=$xmlDoc-&gt;getElementsByTagName(</highlight><highlight class="stringliteral">&apos;item&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>($i=0;<sp/>$i&lt;=2;<sp/>$i++)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>$item_title=$x-&gt;item($i)-&gt;getElementsByTagName(</highlight><highlight class="stringliteral">&apos;title&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>$item_link=$x-&gt;item($i)-&gt;getElementsByTagName(</highlight><highlight class="stringliteral">&apos;link&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>$item_desc=$x-&gt;item($i)-&gt;getElementsByTagName(</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>-&gt;item(0)-&gt;childNodes-&gt;item(0)-&gt;nodeValue;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>echo<sp/>(</highlight><highlight class="stringliteral">&quot;&lt;p&gt;&lt;a<sp/>href=&apos;&quot;</highlight><highlight class="normal"><sp/>.<sp/>$item_link</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&apos;&gt;&quot;</highlight><highlight class="normal"><sp/>.<sp/>$item_title<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&lt;/a&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>echo<sp/>(</highlight><highlight class="stringliteral">&quot;&lt;br&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>echo<sp/>($item_desc<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&lt;/p&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">$channel_title<sp/>=<sp/><ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;real_escape_string($item_title);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">$channel_link=<ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;real_escape_string($item_link);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">$channel_desc=<ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;real_escape_string($item_desc);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//insert<sp/>the<sp/>news<sp/>for<sp/>the<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">$SQL<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>news(title,<sp/>dtime,link,<sp/>text1)<sp/><sp/>VALUES<sp/>(&apos;$channel_title&apos;,<sp/>NOW(),<sp/>&apos;$channel_link&apos;,&apos;$channel_desc&apos;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="getrss_8php_1a112ef069ddc0454086e3d1e6d8d55d07" kindref="member">$result</ref><sp/>=<ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;query($SQL);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="getrss_8php_1a0d9c79b9b86b3f5891c6d3892f12c6a0" kindref="member">$connection</ref>-&gt;close();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">?&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/getrss.php"/>
+  </compounddef>
+</doxygen>

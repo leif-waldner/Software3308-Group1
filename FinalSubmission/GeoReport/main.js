@@ -1,12 +1,26 @@
+/** @file
+ * This is the RSS feed retrieval code
+ * 
+ * We first empty the rss display on call
+ * Second we handle the rss call for multiple browsers
+ * Next we have a ready-state for xmlhttp calls
+ * in this case we are checking that the rss request 
+ * was finished and the response is ready(indicated
+ * when readyState is 4 and status is 200)
+ *
+ * After that we have the xml http-call to send the
+ * rss request
+ */ 
+
 function showRSS(str) {
   if (str.length==0) {
     document.getElementById("rssOutput").innerHTML="";
     return;
   }
   if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
+    /// code for IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
-  } else {  // code for IE6, IE5
+  } else {  /// code for IE6, IE5
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
   xmlhttp.onreadystatechange=function() {
@@ -14,11 +28,13 @@ function showRSS(str) {
       document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
     }
   }
-  //can add test for correct getrss.php?q=STATENAME
+  ///can add test for correct getrss.php?q=STATENAME
   xmlhttp.open("GET","getrss.php?q="+str,true);
   xmlhttp.send();
 }
-
+/* This function is simply used to grab a state name from our 
+ * states json list
+ */
 function getName(abbr) {
   var ret = states[abbr];
   return ret;

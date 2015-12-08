@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="index_8php" kind="file" language="PHP">
+    <compoundname>index.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;!doctype<sp/>html&gt;<sp/>&lt;html&gt;<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;head&gt;<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>&lt;meta<sp/>charset=</highlight><highlight class="stringliteral">&quot;utf-8&quot;</highlight><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>&lt;title&gt;GeoReport.com&lt;/title&gt;<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>&lt;meta<sp/>name=</highlight><highlight class="stringliteral">&quot;description&quot;</highlight><highlight class="normal"><sp/>content=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>&lt;!--&lt;meta<sp/>name=</highlight><highlight class="stringliteral">&quot;viewport&quot;</highlight><highlight class="normal"><sp/>content=</highlight><highlight class="stringliteral">&quot;width=device-width&quot;</highlight><highlight class="normal">&gt;<sp/>&lt;!--<sp/>Place<sp/>favicon.ico<sp/>and<sp/>apple-touch-icon.png<sp/>in<sp/>the<sp/>root<sp/>directory<sp/>--&gt;<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>&lt;link<sp/>rel=</highlight><highlight class="stringliteral">&quot;stylesheet&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;styles/vendor.css&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>&lt;link<sp/>rel=</highlight><highlight class="stringliteral">&quot;stylesheet&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;styles/main.css&quot;</highlight><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>&lt;!--<sp/>&lt;base<sp/>href=</highlight><highlight class="stringliteral">&quot;/&quot;</highlight><highlight class="normal">&gt;<sp/>&lt;link<sp/>rel=</highlight><highlight class="stringliteral">&quot;icon&quot;</highlight><highlight class="normal"><sp/>href=</highlight><highlight class="stringliteral">&quot;//d2c87l0yth4zbw.cloudfront.net/i/_global/favicon.png&quot;</highlight><highlight class="normal">&gt;<sp/>&lt;!--<sp/>Open<sp/>Graph<sp/>data<sp/>--&gt;<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&lt;/head&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">&lt;body&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;site-content-container&quot;</highlight><highlight class="normal"><sp/>style=</highlight><highlight class="stringliteral">&apos;background-image:<sp/>url(&quot;img/side_earth.jpg&quot;);<sp/>background-repeat:<sp/>repeat;<sp/>background-size:cover;&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;div<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;main-content&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;header&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;img<sp/>src=</highlight><highlight class="stringliteral">&apos;strawman.png&apos;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;font<sp/>size=</highlight><highlight class="stringliteral">&quot;5&quot;</highlight><highlight class="normal">&gt;GeoReport&lt;/font&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;nav&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>style=</highlight><highlight class="stringliteral">&quot;border-left:1px<sp/>solid<sp/>white&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>USA&lt;/a&gt;&lt;a<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navtabs&quot;</highlight><highlight class="normal">&gt;EARTH&lt;/a&gt;&lt;a<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navtabs&quot;</highlight><highlight class="normal">&gt;SPACE&lt;/a&gt;&lt;a<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;navtabs&quot;</highlight><highlight class="normal">&gt;EU&lt;/a&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/nav&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/header&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/div&gt;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>&lt;footer<sp/>ng-include=</highlight><highlight class="stringliteral">&quot;&apos;partials/footer.html&apos;&quot;</highlight><highlight class="normal">&gt;&lt;/footer&gt;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">&lt;/body&gt;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;style&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#alert<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font-family:<sp/>Arial,<sp/>Helvetica,<sp/>sans-serif;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font-size:<sp/>16px;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>background-color:<sp/>#ddd;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color:<sp/>#333;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>padding:<sp/>5px;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>font-weight:<sp/>bold;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/style&gt;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;raphael.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;color.jquery.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;jquery.usmap.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;script<sp/>src=</highlight><highlight class="stringliteral">&quot;main.js&quot;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;script&gt;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>$(document).ready(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$(</highlight><highlight class="stringliteral">&apos;#map&apos;</highlight><highlight class="normal">).usmap({</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;click&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(event,<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>test<sp/>to<sp/>make<sp/>sure<sp/>showRSS<sp/>returned<sp/>something<sp/>correctly<sp/>for<sp/>this<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>state<sp/>=<sp/>getName(data.name);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>console.log(</highlight><highlight class="stringliteral">&quot;getName<sp/>finds<sp/>that&quot;</highlight><highlight class="normal">,<sp/>data.name,<sp/></highlight><highlight class="stringliteral">&quot;is:&quot;</highlight><highlight class="normal">,<sp/>state);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="main_8js_1abd5b84a0e5ceb32a7f5328841b17efc2" kindref="member">showRSS</ref>(state);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/script&gt;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;rssOutput&quot;</highlight><highlight class="normal">&gt;RSS-feed<sp/>will<sp/>be<sp/>listed<sp/>here...&lt;/div&gt;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;map&quot;</highlight><highlight class="normal"><sp/>style=</highlight><highlight class="stringliteral">&quot;position:<sp/>relative;<sp/>width:<sp/>800px;<sp/>height:<sp/>600px;<sp/>left:0%;<sp/>opacity:<sp/>.6&quot;</highlight><highlight class="normal">&gt;&lt;/div&gt;</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/index.php"/>
+  </compounddef>
+</doxygen>

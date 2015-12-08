@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_fba2384c08681ad885da053df20f7cb3" kind="dir">
+    <compoundname>jasmine/spec</compoundname>
+    <innerfile refid="_player_spec_8js">PlayerSpec.js</innerfile>
+    <innerfile refid="_spec_helper_8js">SpecHelper.js</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/spec/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="_player_spec_8js" kind="file" language="Javascript">
+    <compoundname>PlayerSpec.js</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_player_spec_8js_1af19dd428df246ae820bbe5e7d815bac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>describe</definition>
+        <argsstring>(&quot;Player&quot;, function(){var player;var song;beforeEach(function(){player=new Player();song=new Song();});it(&quot;should be able to play a Song&quot;, function(){player.play(song);expect(player.currentlyPlayingSong).toEqual(song);expect(player).toBePlaying(song);});describe(&quot;when song has been paused&quot;, function(){beforeEach(function(){player.play(song);player.pause();});it(&quot;should indicate that the song is currently paused&quot;, function(){expect(player.isPlaying).toBeFalsy();expect(player).not.toBePlaying(song);});it(&quot;should be possible to resume&quot;, function(){player.resume();expect(player.isPlaying).toBeTruthy();expect(player.currentlyPlayingSong).toEqual(song);});});it(&quot;tells the current song if the user has made it a favorite&quot;, function(){spyOn(song, &apos;persistFavoriteStatus&apos;);player.play(song);player.makeFavorite();expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);});describe(&quot;#resume&quot;, function(){it(&quot;should throw an exception if song is already playing&quot;, function(){player.play(song);expect(function(){player.resume();}).toThrowError(&quot;song is already playing&quot;);});});})</argsstring>
+        <name>describe</name>
+        <param>
+          <type>&quot;Player&quot;</type>
+          <defname>&quot;Player&quot;</defname>
+        </param>
+        <param>
+          <type>function(){var player;var song;beforeEach(function(){player=new Player();song=new Song();});it(&quot;should be able to play a Song&quot;, function(){player.play(song);expect(player.currentlyPlayingSong).toEqual(song);expect(player).toBePlaying(song);});describe(&quot;when song has been paused&quot;, function(){beforeEach(function(){player.play(song);player.pause();});it(&quot;should indicate that the song is currently paused&quot;, function(){expect(player.isPlaying).toBeFalsy();expect(player).not.toBePlaying(song);});it(&quot;should be possible to resume&quot;, function(){player.resume();expect(player.isPlaying).toBeTruthy();expect(player.currentlyPlayingSong).toEqual(song);});});it(&quot;tells the current song if the user has made it a favorite&quot;, function(){spyOn(song, &apos;persistFavoriteStatus&apos;);player.play(song);player.makeFavorite();expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);});describe(&quot;#resume&quot;, function(){it(&quot;should throw an exception if song is already playing&quot;, function(){player.play(song);expect(function(){player.resume();}).toThrowError(&quot;song is already playing&quot;);});});}</type>
+          <defname>function(){var player;var song;beforeEach(function(){player=new Player();song=new Song();});it(&quot;should be able to play a Song&quot;, function(){player.play(song);expect(player.currentlyPlayingSong).toEqual(song);expect(player).toBePlaying(song);});describe(&quot;when song has been paused&quot;, function(){beforeEach(function(){player.play(song);player.pause();});it(&quot;should indicate that the song is currently paused&quot;, function(){expect(player.isPlaying).toBeFalsy();expect(player).not.toBePlaying(song);});it(&quot;should be possible to resume&quot;, function(){player.resume();expect(player.isPlaying).toBeTruthy();expect(player.currentlyPlayingSong).toEqual(song);});});it(&quot;tells the current song if the user has made it a favorite&quot;, function(){spyOn(song, &apos;persistFavoriteStatus&apos;);player.play(song);player.makeFavorite();expect(song.persistFavoriteStatus).toHaveBeenCalledWith(true);});describe(&quot;#resume&quot;, function(){it(&quot;should throw an exception if song is already playing&quot;, function(){player.play(song);expect(function(){player.resume();}).toThrowError(&quot;song is already playing&quot;);});});}</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/spec/PlayerSpec.js" line="1" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">describe(</highlight><highlight class="stringliteral">&quot;Player&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/>var<sp/>player;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/>var<sp/>song;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>beforeEach(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>player<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Player();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>song<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Song();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;should<sp/>be<sp/>able<sp/>to<sp/>play<sp/>a<sp/>Song&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>player.play(song);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>expect(player.currentlyPlayingSong).toEqual(song);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//demonstrates<sp/>use<sp/>of<sp/>custom<sp/>matcher</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>expect(player).toBePlaying(song);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>describe(</highlight><highlight class="stringliteral">&quot;when<sp/>song<sp/>has<sp/>been<sp/>paused&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>beforeEach(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player.play(song);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player.pause();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;should<sp/>indicate<sp/>that<sp/>the<sp/>song<sp/>is<sp/>currently<sp/>paused&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>expect(player.isPlaying).toBeFalsy();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>demonstrates<sp/>use<sp/>of<sp/>&apos;not&apos;<sp/>with<sp/>a<sp/>custom<sp/>matcher</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>expect(player).not.toBePlaying(song);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;should<sp/>be<sp/>possible<sp/>to<sp/>resume&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player.resume();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>expect(player.isPlaying).toBeTruthy();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>expect(player.currentlyPlayingSong).toEqual(song);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>demonstrates<sp/>use<sp/>of<sp/>spies<sp/>to<sp/>intercept<sp/>and<sp/>test<sp/>method<sp/>calls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;tells<sp/>the<sp/>current<sp/>song<sp/>if<sp/>the<sp/>user<sp/>has<sp/>made<sp/>it<sp/>a<sp/>favorite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>spyOn(song,<sp/></highlight><highlight class="stringliteral">&apos;persistFavoriteStatus&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>player.play(song);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>player.makeFavorite();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>expect(song.persistFavoriteStatus).toHaveBeenCalledWith(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//demonstrates<sp/>use<sp/>of<sp/>expected<sp/>exceptions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>describe(</highlight><highlight class="stringliteral">&quot;#resume&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;should<sp/>throw<sp/>an<sp/>exception<sp/>if<sp/>song<sp/>is<sp/>already<sp/>playing&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>player.play(song);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>expect(</highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.resume();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}).toThrowError(</highlight><highlight class="stringliteral">&quot;song<sp/>is<sp/>already<sp/>playing&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">});</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/spec/PlayerSpec.js"/>
+  </compounddef>
+</doxygen>

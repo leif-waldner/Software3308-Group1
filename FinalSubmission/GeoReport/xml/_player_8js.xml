@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="_player_8js" kind="file" language="Javascript">
+    <compoundname>Player.js</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_player_8js_1a0d1761d8e45f1c62f0c3e7d10d91235f" prot="public" static="no" mutable="no">
+        <type>Player prototype</type>
+        <definition>Player prototype play</definition>
+        <argsstring></argsstring>
+        <name>play</name>
+        <initializer>= function(song) {
+  this.currentlyPlayingSong = song;
+  this.isPlaying = true;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" line="3" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_player_8js_1a31948f9ff537bc59f81b1893424687be" prot="public" static="no" mutable="no">
+        <type>Player prototype</type>
+        <definition>Player prototype pause</definition>
+        <argsstring></argsstring>
+        <name>pause</name>
+        <initializer>= function() {
+  this.isPlaying = false;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" line="8" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_player_8js_1a578f55d6703ca9bb926b561b40de2e87" prot="public" static="no" mutable="no">
+        <type>Player prototype</type>
+        <definition>Player prototype resume</definition>
+        <argsstring></argsstring>
+        <name>resume</name>
+        <initializer>= function() {
+  if (this.isPlaying) {
+    throw new Error(&quot;song is already playing&quot;);
+  }
+
+  this.isPlaying = true;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" line="12" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_player_8js_1a45ac597650bf13a1d24ae77124b4e40b" prot="public" static="no" mutable="no">
+        <type>Player prototype</type>
+        <definition>Player prototype makeFavorite</definition>
+        <argsstring></argsstring>
+        <name>makeFavorite</name>
+        <initializer>= function() {
+  this.currentlyPlayingSong.persistFavoriteStatus(true);
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" line="20" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_player_8js_1a3fbb489bb462be0dd1155cc5b6ed1e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>function</type>
+        <definition>function Player</definition>
+        <argsstring>()</argsstring>
+        <name>Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" line="1" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js" bodystart="1" bodyend="2"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">function</highlight><highlight class="normal"><sp/>Player()<sp/>{</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Player.prototype.play<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(song)<sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/>this.currentlyPlayingSong<sp/>=<sp/>song;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/>this.isPlaying<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">Player.prototype.pause<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>this.isPlaying<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">Player.prototype.resume<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this.isPlaying)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Error(</highlight><highlight class="stringliteral">&quot;song<sp/>is<sp/>already<sp/>playing&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>this.isPlaying<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">Player.prototype.makeFavorite<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>this.currentlyPlayingSong.persistFavoriteStatus(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/jasmine/src/Player.js"/>
+  </compounddef>
+</doxygen>

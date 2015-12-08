@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="scripts_2vendor_2ng-infinite-scroll_8min_8js" kind="file" language="Javascript">
+    <compoundname>ng-infinite-scroll.min.js</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="scripts_2vendor_2ng-infinite-scroll_8min_8js_1a4b97eb97db2365148a5c3a5070f0cdd1" prot="public" static="no" mutable="no">
+        <type>var</type>
+        <definition>mod</definition>
+        <argsstring></argsstring>
+        <name>mod</name>
+        <initializer>=angular.module(&quot;infinite-scroll&quot;,[])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/scripts/vendor/ng-infinite-scroll.min.js" line="2" column="1" bodyfile="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/scripts/vendor/ng-infinite-scroll.min.js" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="scripts_2vendor_2ng-infinite-scroll_8min_8js_1a311aec36f9a67c1188fd365cc42f7ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mod</type>
+        <definition>mod directive</definition>
+        <argsstring>(&quot;infiniteScroll&quot;,[&quot;$rootScope&quot;,&quot;$window&quot;,&quot;$timeout&quot;, function(n, i, t){return{link:function(e, l, o){var r, c, a, f, u;return i=angular.element(i), f=0, null!=o.infiniteScrollDistance &amp;&amp;e.$watch(o.infiniteScrollDistance, function(n){return f=parseInt(n, 10)}), u=!0, r=!1, null!=o.infiniteScrollDisabled &amp;&amp;e.$watch(o.infiniteScrollDisabled, function(n){return u=!n, u &amp;&amp;r?(r=!1, a()):void 0}), c=i, null!=o.infiniteScrollContainer &amp;&amp;e.$watch(o.infiniteScrollContainer, function(n){if(n=angular.element(n), null!=n) return c=n;throw new Exception(&quot;invalid infinite-scroll-container attribute.&quot;)}), null!=o.infiniteScrollParent &amp;&amp;(c=l.parent(), e.$watch(o.infiniteScrollParent, function(){return c=l.parent()})), a=function(){var t, a, h, d;return c===i?(t=c.height()+c.scrollTop(), a=l.offset().top+l.height()):(t=c.height(), a=l.offset().top-c.offset().top+l.height()), h=a-t, d=c.height()*f &gt;=h, d &amp;&amp;u?n.$$phase?e.$eval(o.infiniteScroll):e.$apply(o.infiniteScroll):d?r=!0:void 0}, c.on(&quot;scroll&quot;, a), e.$on(&quot;$destroy&quot;, function(){return c.off(&quot;scroll&quot;, a)}), t(function(){return o.infiniteScrollImmediateCheck?e.$eval(o.infiniteScrollImmediateCheck)?a():void 0:a()}, 0)}}}])</argsstring>
+        <name>directive</name>
+        <param>
+          <type>&quot;infiniteScroll&quot;</type>
+          <defname>&quot;infiniteScroll&quot;</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/scripts/vendor/ng-infinite-scroll.min.js" line="2" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>ng-infinite-scroll<sp/>-<sp/>v1.0.0<sp/>-<sp/>2013-05-13<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">var<sp/>mod;mod=angular.module(</highlight><highlight class="stringliteral">&quot;infinite-scroll&quot;</highlight><highlight class="normal">,[]),mod.directive(</highlight><highlight class="stringliteral">&quot;infiniteScroll&quot;</highlight><highlight class="normal">,[</highlight><highlight class="stringliteral">&quot;$rootScope&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;$window&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;$timeout&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">function</highlight><highlight class="normal">(n,i,t){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal">{link:</highlight><highlight class="keyword">function</highlight><highlight class="normal">(e,l,o){var<sp/>r,c,a,f,u;</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>i=angular.element(i),f=0,null!=o.infiniteScrollDistance&amp;&amp;e.$watch(o.infiniteScrollDistance,</highlight><highlight class="keyword">function</highlight><highlight class="normal">(n){return<sp/>f=parseInt(n,10)}),u=!0,r=!1,null!=o.infiniteScrollDisabled&amp;&amp;e.$watch(o.infiniteScrollDisabled,</highlight><highlight class="keyword">function</highlight><highlight class="normal">(n){return<sp/>u=!n,u&amp;&amp;r?(r=!1,a()):void<sp/>0}),c=i,null!=o.infiniteScrollContainer&amp;&amp;e.$watch(o.infiniteScrollContainer,</highlight><highlight class="keyword">function</highlight><highlight class="normal">(n){if(n=angular.element(n),null!=n)return<sp/>c=n;throw<sp/>new<sp/>Exception(</highlight><highlight class="stringliteral">&quot;invalid<sp/>infinite-scroll-container<sp/>attribute.&quot;</highlight><highlight class="normal">)}),null!=o.infiniteScrollParent&amp;&amp;(c=l.parent(),e.$watch(o.infiniteScrollParent,</highlight><highlight class="keyword">function</highlight><highlight class="normal">(){return<sp/>c=l.parent()})),a=</highlight><highlight class="keyword">function</highlight><highlight class="normal">(){var<sp/>t,a,h,d;</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c===i?(t=c.height()+c.scrollTop(),a=l.offset().top+l.height()):(t=c.height(),a=l.offset().top-c.offset().top+l.height()),h=a-t,d=c.height()*f&gt;=h,d&amp;&amp;u?n.$$phase?e.$eval(o.infiniteScroll):e.$apply(o.infiniteScroll):d?r=!0:</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>0},c.on(</highlight><highlight class="stringliteral">&quot;scroll&quot;</highlight><highlight class="normal">,a),e.$on(</highlight><highlight class="stringliteral">&quot;$destroy&quot;</highlight><highlight class="normal">,</highlight><highlight class="keyword">function</highlight><highlight class="normal">(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c.off(</highlight><highlight class="stringliteral">&quot;scroll&quot;</highlight><highlight class="normal">,a)}),t(</highlight><highlight class="keyword">function</highlight><highlight class="normal">(){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>o.infiniteScrollImmediateCheck?e.$eval(o.infiniteScrollImmediateCheck)?a():void<sp/>0:a()},0)}}}]);</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/scripts/vendor/ng-infinite-scroll.min.js"/>
+  </compounddef>
+</doxygen>

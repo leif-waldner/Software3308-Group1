@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="main__test_8js" kind="file" language="Javascript">
+    <compoundname>main_test.js</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="main__test_8js_1ad5039b3ae71ae3cc1a8af0ca11d5be2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>describe</definition>
+        <argsstring>(&quot;My first test&quot;, function(){it(&quot;expects true to be true&quot;, function(){expect(true).toBe(true);});})</argsstring>
+        <name>describe</name>
+        <param>
+          <type>&quot;My first test&quot;</type>
+          <defname>&quot;My first test&quot;</defname>
+        </param>
+        <param>
+          <type>function(){it(&quot;expects true to be true&quot;, function(){expect(true).toBe(true);});}</type>
+          <defname>function(){it(&quot;expects true to be true&quot;, function(){expect(true).toBe(true);});}</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/main_test.js" line="5" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>These are our simple unit test cases using jasmine for javscript unit testing. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="normal">describe(</highlight><highlight class="stringliteral">&quot;My<sp/>first<sp/>test&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;expects<sp/>true<sp/>to<sp/>be<sp/>true&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">(){</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>expect(</highlight><highlight class="keyword">true</highlight><highlight class="normal">).toBe(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">});</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">describe(</highlight><highlight class="stringliteral">&apos;toEqual&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>it(</highlight><highlight class="stringliteral">&apos;passes<sp/>if<sp/>arrays<sp/>are<sp/>equal&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>var<sp/>arr<sp/>=<sp/>[1,<sp/>2,<sp/>3];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expect(arr).toEqual([1,<sp/>2,<sp/>3]);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">});</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">describe(</highlight><highlight class="stringliteral">&quot;State<sp/>abbreviations&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>it(</highlight><highlight class="stringliteral">&quot;passes<sp/>if<sp/>getName(&apos;AR&apos;)&apos;s<sp/>return<sp/>is<sp/>equal<sp/>to<sp/>Arkansas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>var<sp/>state<sp/>=<sp/>getName(</highlight><highlight class="stringliteral">&quot;AR&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>expect(<sp/>getName(</highlight><highlight class="stringliteral">&quot;AR&quot;</highlight><highlight class="normal">)<sp/>).toEqual(</highlight><highlight class="stringliteral">&quot;Arkansas&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">});</highlight></codeline>
+    </programlisting>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/main_test.js"/>
+  </compounddef>
+</doxygen>

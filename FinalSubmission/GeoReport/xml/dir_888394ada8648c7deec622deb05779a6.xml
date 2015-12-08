@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_888394ada8648c7deec622deb05779a6" kind="dir">
+    <compoundname>scripts/vendor</compoundname>
+    <innerfile refid="scripts_2vendor_2isotope_8min_8js">isotope.min.js</innerfile>
+    <innerfile refid="scripts_2vendor_2ng-infinite-scroll_8min_8js">ng-infinite-scroll.min.js</innerfile>
+    <innerfile refid="scripts_2vendor_2tweenmax_8min_8js">tweenmax.min.js</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/leif/Dropbox/Software3308-Group1/FinalSubmission/GeoReport/scripts/vendor/"/>
+  </compounddef>
+</doxygen>
