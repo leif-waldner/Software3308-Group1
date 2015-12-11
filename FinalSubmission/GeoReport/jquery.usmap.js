@@ -49,7 +49,7 @@
   
   // Some constants
   var WIDTH = 930,
-      HEIGHT = 630,
+      HEIGHT = 10,
       LABELS_WIDTH = 70;
   
   // Default options

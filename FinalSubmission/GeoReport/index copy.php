@@ -1,7 +1,7 @@
 <!doctype html> <html> 
 
 
-<!-- Website based on spotify -->
+
 <head> 
   <meta charset="utf-8"> 
   <title>GeoReport.com</title> 
@@ -62,4 +62,4 @@
 
 
   <div id="rssOutput">RSS-feed will be listed here...</div>
-  <div id="map" style="position: relative; width: 65%; height: 600px; left:0%; opacity: .6"></div>
+  <div id="map" style="position: relative; width: 800px; height: 600px; left:0%; opacity: .6"></div>
